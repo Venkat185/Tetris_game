@@ -1,4 +1,4 @@
-// Tetris MVP - Game Logic
+// BlockDrop - Game Logic
 
 const COLS = 10;
 const ROWS = 20;

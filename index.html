@@ -3,12 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tetris</title>
+  <title>BlockDrop</title>
+  <meta name="description" content="BlockDrop - A classic block-stacking puzzle game. Clear rows, score points, and test your skills. Play free in your browser.">
+  <meta name="keywords" content="BlockDrop, block game, puzzle game, browser game, free online game">
+  <!-- Replace with your Google Search Console verification code -->
+  <meta name="google-site-verification" content="REPLACE_WITH_YOUR_VERIFICATION_CODE">
   <link rel="stylesheet" href="style.css">
+  <!-- Google AdSense - Replace ca-pub-XXXXXXXXXXXXXXXX with your publisher ID after approval -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  <!-- Google Analytics 4 - Replace G-XXXXXXXXXX with your Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 </head>
 <body>
+  <!-- Ad unit - top. Replace data-ad-slot with your slot ID after AdSense approval -->
+  <div class="ad-container">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+         data-ad-slot="1111111111"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
   <div class="game-card">
-    <h1 class="title">Tetris</h1>
+    <h1 class="title">BlockDrop</h1>
     <div class="score-container">
       <span class="score-label">Score</span>
       <span id="score">0</span>
@@ -23,6 +47,21 @@
     <div class="controls">
       Controls: ← → ↓ Move | ↑ Space Rotate | Enter Start/Pause
     </div>
+    <footer class="site-footer">
+      <a href="privacy.html">Privacy</a><span>|</span>
+      <a href="about.html">About</a><span>|</span>
+      <a href="contact.html">Contact</a>
+    </footer>
+  </div>
+  <!-- Ad unit - bottom. Replace data-ad-slot with your slot ID after AdSense approval -->
+  <div class="ad-container">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+         data-ad-slot="2222222222"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
   <script src="game.js"></script>
 </body>
