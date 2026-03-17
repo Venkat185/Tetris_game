@@ -6,31 +6,58 @@
   <title>About - BlockDrop</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .page-content { max-width: 600px; margin: 0 auto; padding: 2rem; text-align: left; }
-    .page-content h1 { margin-bottom: 0.5rem; }
-    .page-content p { margin: 0.75rem 0; line-height: 1.6; }
-    .page-content a { color: #4a90d9; }
+    .about-page { max-width: 700px; margin: 0 auto; padding: 1rem; }
+    .about-page h1 { color: #333; margin-bottom: 0.5rem; }
+    .about-page h2 { color: #333; font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.5rem; padding-top: 1rem; border-top: 1px solid #eee; }
+    .about-page h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+    .about-page p, .about-page ul { margin: 0.5rem 0; line-height: 1.7; color: #444; }
+    .about-page ul { padding-left: 1.5rem; }
+    .about-page a { color: #4a90d9; }
   </style>
 </head>
 <body>
+  <header class="site-header">
+    <div class="header-brand">
+      <a href="index.html" style="text-decoration: none;"><h1 class="logo">BlockDrop</h1></a>
+      <span class="logo-tagline">Free Online Game</span>
+    </div>
+    <nav class="header-nav">
+      <a href="about.html">About</a>
+      <a href="about.html#objective">Objective</a>
+      <a href="about.html#controls">Controls</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
   <div class="game-card page-card">
-    <h1 class="title">About BlockDrop</h1>
+    <div class="about-page">
+      <h1>About BlockDrop</h1>
+      <p>BlockDrop is a classic block-stacking puzzle game. Clear full rows to score points and keep the board from filling up. Play free in your browser—no installation required.</p>
 
-    <div class="page-content">
-      <p>BlockDrop is a classic block-stacking puzzle game. Clear full rows to score points and keep the board from filling up.</p>
+      <h2 id="objective">Objective</h2>
+      <p>Your goal is to clear as many horizontal lines as possible by filling them completely with blocks. Each cleared line disappears and adds to your score. The game ends when new blocks can no longer spawn at the top of the board.</p>
 
-      <p><strong>How to play:</strong></p>
-      <ul style="padding-left: 1.5rem; line-height: 1.8;">
-        <li>Use arrow keys to move pieces left and right</li>
-        <li>Press Down to soft drop</li>
-        <li>Press Up or Space to rotate</li>
-        <li>Press Enter to pause or restart</li>
+      <h2 id="controls">Controls & Scores</h2>
+      <p><strong>Controls:</strong></p>
+      <ul>
+        <li><strong>← →</strong> Move piece left or right</li>
+        <li><strong>↓</strong> Soft drop (move down faster)</li>
+        <li><strong>↑</strong> or <strong>Space</strong> Rotate piece clockwise</li>
+        <li><strong>C</strong> Hold current piece for later use</li>
+        <li><strong>Enter</strong> Pause or resume the game</li>
+      </ul>
+      <p><strong>Scoring:</strong></p>
+      <ul>
+        <li>100 points per line × current level</li>
+        <li>Level increases every 10 lines cleared</li>
       </ul>
 
+      <h2 id="gameplay">Gameplay Info</h2>
+      <p>Use the <strong>HOLD</strong> panel to store a piece and the <strong>NEXT</strong> panel to see the upcoming piece. Plan your moves ahead to clear multiple lines at once and maximize your score!</p>
       <p>BlockDrop is built with HTML, CSS, and JavaScript. No installation required—just play in your browser.</p>
     </div>
 
-    <p style="margin-top: 1.5rem;"><a href="index.html" class="footer-link">Back to game</a></p>
+    <p style="margin-top: 1.5rem;"><a href="index.html" class="footer-link">← Back to game</a></p>
   </div>
 </body>
 </html>
