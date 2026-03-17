@@ -2,9 +2,9 @@
 
 const COLS = 10;
 const ROWS = 20;
-const CELL_SIZE = 26;
+const CELL_SIZE = 30;
 const DROP_INTERVAL = 500;
-const PREVIEW_SIZE = 20;
+const PREVIEW_SIZE = 22;
 
 const SHAPES = {
   I: [
@@ -75,8 +75,10 @@ let level;
 let gameOver;
 let paused;
 let dropTimer;
+let gameStarted = false;
 
 function init() {
+  gameStarted = true;
   canvas = document.getElementById('game-canvas');
   ctx = canvas.getContext('2d');
   holdCanvas = document.getElementById('hold-canvas');
@@ -98,6 +100,7 @@ function init() {
   document.getElementById('lines').textContent = '0';
   document.getElementById('game-over').classList.add('hidden');
   document.getElementById('pause-overlay').classList.add('hidden');
+  document.getElementById('start-overlay').classList.add('hidden');
 
   nextPiece = createRandomPiece();
   spawnPiece();
@@ -359,4 +362,23 @@ document.getElementById('close-modal-btn').addEventListener('click', () => {
   document.getElementById('how-to-play-modal').classList.add('hidden');
 });
 
-init();
+document.getElementById('play-btn').addEventListener('click', () => {
+  document.getElementById('start-overlay').classList.add('hidden');
+  init();
+});
+
+document.querySelectorAll('.touch-btn').forEach((btn) => {
+  const action = btn.getAttribute('data-action');
+  const handler = (e) => {
+    e.preventDefault();
+    if (!gameStarted || gameOver || paused) return;
+    switch (action) {
+      case 'left': movePiece(0, -1); break;
+      case 'right': movePiece(0, 1); break;
+      case 'rotate': rotatePiece(); break;
+      case 'down': movePiece(1, 0); break;
+    }
+  };
+  btn.addEventListener('click', handler);
+  btn.addEventListener('touchstart', handler, { passive: false });
+});

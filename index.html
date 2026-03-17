@@ -51,7 +51,20 @@
       <div class="game-center">
         <div class="game-card">
           <div class="canvas-wrapper">
-            <canvas id="game-canvas" width="260" height="520"></canvas>
+            <canvas id="game-canvas" width="300" height="600"></canvas>
+            <div id="start-overlay" class="start-overlay">
+              <h2 class="start-title">BlockDrop</h2>
+              <button id="play-btn" class="play-btn">PLAY</button>
+              <p class="start-level">LEVEL: 1</p>
+              <div class="high-scores">
+                <div class="high-scores-label">HIGH SCORES</div>
+                <div>5,000</div>
+                <div>4,000</div>
+                <div>3,000</div>
+                <div>2,000</div>
+                <div>1,000</div>
+              </div>
+            </div>
             <div id="pause-overlay" class="pause-overlay hidden">
               <h2>PAUSED</h2>
               <button id="resume-btn" class="menu-btn primary">Resume</button>
@@ -68,7 +81,7 @@
 
       <div class="game-panel next-panel">
         <div class="panel-label">NEXT</div>
-        <canvas id="next-canvas" width="104" height="104"></canvas>
+        <canvas id="next-canvas" width="120" height="120"></canvas>
         <div class="stats-panel">
           <div class="stat-row"><span class="stat-label">SCORE</span><span id="score">0</span></div>
           <div class="stat-row"><span class="stat-label">LEVEL</span><span id="level">1</span></div>
@@ -76,6 +89,13 @@
         </div>
         <button id="pause-btn" class="pause-btn" aria-label="Pause" title="Pause">⏸</button>
       </div>
+    </div>
+
+    <div class="touch-controls">
+      <button class="touch-btn" data-action="left">←</button>
+      <button class="touch-btn" data-action="right">→</button>
+      <button class="touch-btn" data-action="rotate">↻</button>
+      <button class="touch-btn" data-action="down">↓</button>
     </div>
 
     <section class="info-sections">
